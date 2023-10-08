@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import Todoitem from './components/Todoitem/Todoitem';
+import Additem from './components/Additem/Additem';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component{
+
+  state = {
+    users : [
+      {id: 1 , name : "Mohamed", age: 22},
+      {id: 2 , name : "Hamoudi", age: 23},
+      {id: 3 , name : "sidi", age: 24},
+    ]
+  }
+
+  render() {
+    return(
+      <div>
+        To list App
+        <Todoitem />
+        <Additem />
+      </div>
+    )
+  }
 }
-
 export default App;
